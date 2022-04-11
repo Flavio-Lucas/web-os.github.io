@@ -1,0 +1,31 @@
+.tool-bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgba($color: #fff, $alpha: .2);
+    height: 100vh;
+
+    width: 8rem;
+    padding: 1rem;
+
+    &--elements {
+        gap: 1rem;
+        display: flex;
+        flex-direction: column;
+
+        &--element {
+            border-radius: 1rem;
+            background: orange;
+            width: 6rem;
+            height: 6rem;
+            cursor: pointer;
+        }
+    }
+
+    &--menu {
+        background: orange;
+        width: 6rem;
+        height: 6rem;
+        cursor: pointer;
+    }
+}

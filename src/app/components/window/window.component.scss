@@ -1,0 +1,48 @@
+.window {
+    margin: 2rem auto;
+    width: 50%;
+    height: 50%;
+    border: #282828 solid .2rem;
+    background-color: #4D4D4D;
+    border-radius: .7rem;
+    overflow: hidden;
+
+    &--actionbar {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 1rem;
+        padding-left: 1rem;
+        background-color: #4D4D4D;
+        height: 2.5rem;
+        border-bottom: #282828 solid .1rem;
+
+        &--close,
+        &--minimize,
+        &--fullscreen {
+            width: 1rem;
+            height: 1rem;
+            border-radius: 1rem;
+            cursor: pointer;
+        }
+
+        &--close {
+            background-color: red;
+        }
+
+        &--minimize {
+            background-color: yellow;
+        }
+
+        &--fullscreen {
+            background-color: green;
+        }
+    }
+
+    &--body {
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        overflow: auto;
+    }
+}
