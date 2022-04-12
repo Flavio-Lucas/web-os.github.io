@@ -1,10 +1,8 @@
 <div class="desktop">
   <div class="desktop--navbar">
-    <app-tool-bar></app-tool-bar>
+    <app-tool-bar (openApp)="openApp($event)"></app-tool-bar>
   </div>
   <div class="desktop--body">
-    <div class="desktop--body--windows">
-      <app-window></app-window>
-    </div>
+    <app-windows-root></app-windows-root>
   </div>
 </div>

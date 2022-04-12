@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { WindowComponent } from '../window/window.component';
 
 @Component({
   selector: 'app-tool-bar',
@@ -9,37 +10,50 @@ export class ToolBarComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {}
-
   public apps = [
     {
+      id: 0,
       pageUri: '',
       appIconUrl: '',
+      component: WindowComponent,
     },
     {
+      id: 1,
       pageUri: '',
       appIconUrl: '',
+      component: WindowComponent,
     },
     {
+      id: 2,
       pageUri: '',
       appIconUrl: '',
+      component: WindowComponent,
     },
     {
+      id: 3,
       pageUri: '',
       appIconUrl: '',
+      component: WindowComponent,
     },
     {
+      id: 4,
       pageUri: '',
       appIconUrl: '',
+      component: WindowComponent,
     },
-  ]
+  ];
 
-  public openApp(app): void {
-    console.log('Open app!');
+  @Output()
+  public openApp: EventEmitter<any> = new EventEmitter<any>();
+
+  ngOnInit() {}
+
+  public onOpenApp(app: any): void {
+    this.openApp.emit(app);
   }
 
   public openMenu(): void {
-    console.log('Open menu!')
+    console.log('Open menu!');
   }
 
 }

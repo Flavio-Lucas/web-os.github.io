@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
+import { WindowsRootModule } from '../../components/windows-root/windows-root.module';
 
 import { DesktopPageRoutingModule } from './desktop-routing.module';
 
@@ -18,6 +19,7 @@ import { WindowModule } from '../../components/window/window.module';
     DesktopPageRoutingModule,
     ToolBarModule,
     WindowModule,
+    WindowsRootModule,
   ],
   declarations: [DesktopPage]
 })

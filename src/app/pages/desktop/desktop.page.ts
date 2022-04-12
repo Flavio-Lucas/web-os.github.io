@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { WindowsService } from '../../services/windows/windows.service';
 
 @Component({
   selector: 'app-desktop',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DesktopPage implements OnInit {
 
-  constructor() { }
+  constructor(
+    private readonly windowsService: WindowsService,
+  ) { }
 
-  ngOnInit() {
+  ngOnInit() {}
+
+  public openApp(app: any) {
+    const id = this.windowsService.create(app.component);
   }
 
 }
